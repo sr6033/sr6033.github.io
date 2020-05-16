@@ -1,0 +1,191 @@
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <title>Shubham Rath</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="img/favicon.png" rel="icon" type="image/x-icon">
+    <link rel="stylesheet" href="css/semantic.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+          integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11/dist/vue.min.js"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Shubham Rath">
+    <meta name="twitter:site" content="@shubhamrath">
+    <meta name="twitter:creator" content="@shubhamrath">
+    <meta name="twitter:image:src" content="">
+    <meta name="twitter:player" content="">
+
+
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="Shubham Rath">
+    <meta property="og:title" content="Shubham Rath">
+    <meta name="og:image" content="img/og-image.jpg">
+    <meta name="og:url" content="">
+    <meta name="og:site_name" content="Shubham Rath">
+    <meta property="og:description" content=""/>
+
+</head>
+
+<body>
+
+
+
+<ul class="navigation">
+    <li class="active"><span>></span><a href="#home">Home</a></li>
+    <li><span>></span><a href="#about">About</a></li>
+    <li><span>></span><a href="#projects">Projects</a></li>
+    <li><span>></span><a href="https://medium.com/@sudom0nk" target="_blank">Blog</a></li>
+    <li class="email">
+        <a href="mailto:hello@shubhamrath.dev">hello [at] shubhamrath.dev</a>
+    </li>
+</ul>
+
+
+
+
+<div class="ui grid centered container">
+
+    <div class="eleven wide computer sixteen wide mobile sixteen wide tablet column">
+
+       <div class="wrapper">
+
+           <img class="avatar" src="img/avatar.png">
+           <div class="section-header" id="home">~/home</div>
+           <section class="home">
+               <h1>Shubham Rath</h1>
+               <p>Software Engineer, Artist</p>
+           </section>
+
+           <div class="ui hidden divider"></div>
+           <div class="ui hidden divider"></div>
+           <div class="ui hidden divider"></div>
+           <div class="ui hidden computer-only divider"></div>
+           <div class="ui hidden computer-only  divider"></div>
+           <div class="ui hidden computer-only divider"></div>
+
+
+
+
+           <div class="section-header" id="about">~/home/about</div>
+           <section class="about">
+               <p>I am currently working in the domain of backend development with a focus on GoLang, Python, MySQL & MongoDB @ <a href="https://www.goibibo.com/" target="_blank">Goibibo.com</a>. I am based out of Bengaluru, India. <br><br>
+
+                   I have worked extensively in Django and Postgresql and have a strong background in algorithms & data structures. My team represented our college in the ACM ICPC Kolkata-Kanpur regionals (2018). </p>
+
+               <a class="download" href="https://drive.google.com/open?id=1hRpsrSX67yx-_ZqMEkhNlUFJJih-BFx0" target="_blank">
+               Download Resume</a>
+
+               <section class="social">
+                   <div class="sub-header">~/../about/social</div>
+                   <ul class="social-links">
+                       <li class="github">
+                           <div class="box"></div>
+                           <a href="https://github.com/sr6033" target="_blank">Github</a>
+                       </li>
+                       <li class="linkedin">
+                           <div class="box"></div>
+                           <a href="https://www.linkedin.com/in/shubham-rath/" target="_blank">Linkedin</a>
+                       </li>
+                       <li class="twitter">
+                           <div class="box"></div>
+                           <a href="https://twitter.com/sudom0nk" target="_blank">Twitter</a>
+                       </li>
+                       <li class="instagram">
+                           <div class="box"></div>
+                           <a href="https://www.instagram.com/sudom0nk/" target="_blank">Instagram</a>
+                       </li>
+                   </ul>
+                   <p class="comment">// Currently accepting exciting freelance projects.</p>
+                   <a class="email" href="mailto:hello@shubhamrath.dev">
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6zm-2 0l-8 4.99L4 6h16zm0 12H4V8l8 5 8-5v10z"/></svg>
+                       hello [at] shubhamrath.dev
+                   </a>
+               </section>
+
+               <section class="skills">
+                   <div class="sub-header">~/../about/skills</div>
+                   <p>Python, Djnago, GoLang, Node Js, C++, PostgreSQL,
+                       Vue JS, HTML, CSS, JavaScript, OpenCV, GCP, GIT</p>
+               </section>
+
+               <section class="photos">
+                   	<div class="sub-header">~/../about/artwork</div>
+                   	<p class="quote">Look and think before opening the shutter. The heart and mind are the true lens of the camera.</p>
+			       	<div id="app">
+			       	  <div v-if="username && !loading">
+						  <template v-if="grams.length > 0">
+						    <div v-for="(gram, index) in grams" class="img_wrapper">
+						      <a :href="gram.permalink">
+						        <img :src="gram.media_url" :alt="gram.caption" />
+						      </a>
+						    </div>
+						  </template>
+					   </div>
+                      <div v-if="loading" style="height: 300px;position: relative"><div class="ui text center active loader"><span style="opacity: 0.6">Fetching photos...</span></div></div>
+					  <div v-if="error" class="error">Sorry, the Instagram couldn't be fetched.</div>
+                        <!-- <button @click="getMoreGrams">Load More</button> -->
+					</div>
+                   <div style="clear:both"></div>
+                   <a class="external-link" target="_blank" href="https://www.instagram.com/sudom0nk/" style="margin-top: 23px;display: inline-block;" target="_blank">
+                       See more
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5z"/></svg>
+                   </a>
+               </section>
+
+
+           </section>
+
+           <div class="ui hidden divider"></div>
+           <div class="ui hidden divider"></div>
+           <div class="ui hidden divider"></div>
+           <div class="ui hidden computer-only divider"></div>
+           <div class="ui hidden computer-only  divider"></div>
+           <div class="ui hidden computer-only divider"></div>
+
+           <div class="section-header" id="projects">~/home/projects</div>
+           <section class="projects">
+               <section class="project">
+                   <div class="sub-header">~/../projects/gistpush</div>
+                   <p>Npm module/command line tool to add your files to gist easily. There is no need for you to open up your account to upload a gist. Just write your code/content in a file and name the file as you would in the gist. Then upload it to your account as publicly or privately accessible using the command line.</p>
+                   <a class="external-link" href="https://github.com/sr6033/gistpush" target="_blank">Know more
+
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5z"/></svg>
+                   </a>
+               </section>
+
+               <section class="project">
+                   <div class="sub-header">~/../projects/lterm</div>
+                   <p>lterm is an online Terminal Emulator. It is a step by step tutorial that will teach you the bash commands by making you execute them. </p>
+                   <a class="external-link" href="https://github.com/sr6033/lterm" target="_blank">
+                       Know more
+                       <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5z"/></svg>
+                   </a>
+               </section>
+
+           </section>
+
+
+           <section class="footer">
+                <p><img src="https://emojis.slackmojis.com/emojis/images/1576133832/7296/babyyoda.png">May the force be with you.</p>
+           </section>
+
+       </div>
+
+    </div>
+
+</div>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
