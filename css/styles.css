@@ -10,8 +10,6 @@ body {
     background-size: 800px; ;
 }
 
-
-
 img{
     max-width: 100%;
     display: block;
@@ -311,6 +309,19 @@ section.footer img{
     padding: 5px;
 }
 
+img.thumbnail {
+    transition: transform .2s;
+}
+
+img.thumbnail:hover {
+    position:relative;
+    width:100%;
+    height:auto;
+    display:block;
+    z-index:999;
+    transform: scale(1.3);
+}
+
 @media screen and (max-width: 972px) {
     ul.navigation{
         display: none;
@@ -350,6 +361,19 @@ section.footer img{
     .img_wrapper{
         width: 100%;
         margin-bottom: 10px;
+    }
+
+    img.thumbnail {
+        transition: transform .2s;
+    }
+
+    img.thumbnail:hover {
+        position:relative;
+        width:100%;
+        height:auto;
+        display:block;
+        z-index:999;
+        transform: scale(1.1);
     }
 }
 
