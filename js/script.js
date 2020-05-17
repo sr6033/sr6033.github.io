@@ -1,3 +1,4 @@
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 var app = new Vue({
         el: '#app',
         data: {
@@ -19,7 +20,12 @@ var app = new Vue({
                 this.loading= true;
                 axios.get(this.url + "?fields=id,caption,permalink,username,media_url&access_token=" + this.access_token)
                     .then(({data}) => {
-                        this.grams = data.data.slice(0,6)
+                        if (isMobile) {
+                            this.grams = data.data.slice(0,3)
+                        }
+                        else {
+                            this.grams = data.data.slice(0,6)
+                        }
                         this.username = data.data[0].username
                         this.next_url = data.paging.next
                         this.loading = false;
