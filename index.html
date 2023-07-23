@@ -36,13 +36,14 @@
         <meta name="og:image" content="img/ogimage.jpg">
         <meta name="og:url" content="https://shubhamrath.dev/">
         <meta name="og:site_name" content="Shubham Rath">
-        <meta property="og:description" content="Software Engineer, Artist"/>
+        <meta property="og:description" content="Technical Lead, Artist"/>
     </head>
     <body>
         <ul class="navigation">
             <li class="active"><span>></span><a href="#home">Home</a></li>
             <li><span>></span><a href="#about">About</a></li>
             <li><span>></span><a href="#projects">Projects</a></li>
+            <li><span>></span><a href="#book">Current Book</a></li>
             <li><span>></span><a href="https://medium.com/@sudom0nk" target="_blank">Blog</a></li>
             <li class="email">
                 <a href="mailto:hello@shubhamrath.dev">hello [at] shubhamrath.dev</a>
@@ -55,7 +56,7 @@
                     <div class="section-header" id="home">~/home</div>
                     <section class="home">
                         <h1>Shubham Rath</h1>
-                        <p>Software Engineer, Artist</p>
+                        <p>Technical Lead, Artist</p>
                     </section>
                     <div class="ui hidden divider"></div>
                     <div class="ui hidden divider"></div>
@@ -65,8 +66,11 @@
                     <div class="ui hidden computer-only divider"></div>
                     <div class="section-header" id="about">~/home/about</div>
                     <section class="about">
-                        <p>I am currently working in the domain of backend development with a focus on GoLang, Python, MySQL & MongoDB @ <a href="https://www.goibibo.com/" target="_blank">Goibibo.com</a>. I am based out of Bengaluru, India. <br><br>
-                            I have worked extensively in Django and Postgresql and have a strong background in algorithms & data structures. My team represented our college in the ACM ICPC Kolkata-Kanpur regionals (2018). 
+                        <p>I am currently leading various projects <a href="https://indmoney.com/" target="_blank">@IndMoney</a>,
+                            a fintech startup based out of India. My role is to guide, design & handle both architectural & code related decisions on the product.
+                            I am based out of Bengaluru, India.
+                            I have worked extensively in Python(Flask & Django), GoLang(Revel & Gin) & Postgresql and have a strong background in algorithms & data structures.
+                            Having previously contributed my talents to Goibibo/MakeMyTrip, I have honed my problem-solving skills and developed a strong foundation for seamless execution.
                         </p>
                         <a class="download" href="https://drive.google.com/open?id=1hRpsrSX67yx-_ZqMEkhNlUFJJih-BFx0" target="_blank">
                         Download Resume</a>
@@ -87,7 +91,7 @@
                                 </li>
                                 <li class="instagram">
                                     <div class="box"></div>
-                                    <a href="https://www.instagram.com/sudom0nk/" target="_blank">Instagram</a>
+                                    <a href="https://www.instagram.com/chitra_kaaar/" target="_blank">Instagram</a>
                                 </li>
                             </ul>
                             <p class="comment">// Currently accepting exciting freelance projects.</p>
@@ -101,40 +105,43 @@
                         </section>
                         <section class="skills">
                             <div class="sub-header">~/../about/skills</div>
-                            <p>Python, Djnago, GoLang, Node Js, C++, PostgreSQL,
-                                Vue JS, HTML, CSS, JavaScript, OpenCV, GCP, GIT
+                            <p>Python, Flask, Djnago, GoLang, Node Js, C++, PostgreSQL,
+                                Vue JS, HTML, CSS, JavaScript, OpenCV, GCP, GIT, AWS
                             </p>
                         </section>
-                        <section class="photos">
-                            <div class="sub-header">~/../about/artwork</div>
-                            <p class="quote">Art enables us to find ourselves and lose ourselves at the same time.</p>
-                            <div id="app">
-                                <div v-if="username && !loading">
-                                    <template v-if="grams.length > 0">
-                                        <div v-for="(gram, index) in grams" class="img_wrapper">
-                                            <a :href="gram.permalink" target="_blank">
-                                            <img :src="gram.media_url" :alt="gram.caption" class="thumbnail" />
-                                            </a>
-                                        </div>
-                                    </template>
-                                </div>
-                                <div v-if="loading" style="height: 300px;position: relative">
-                                    <div class="ui text center active loader">
-                                        <span style="opacity: 0.6">Fetching photos...</span>
-                                    </div>
-                                </div>
-                                <div v-if="error" class="error">Sorry, the Instagram couldn't be fetched.</div>
-                                <!-- <button @click="getMoreGrams">Load More</button> -->
-                            </div>
-                            <div style="clear:both"></div>
-                            <a class="external-link" target="_blank" href="https://www.instagram.com/sudom0nk/" style="margin-top: 23px;display: inline-block;" target="_blank">
-                                See more
-                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">
-                                    <path d="M0 0h24v24H0z" fill="none"/>
-                                    <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5z"/>
-                                </svg>
-                            </a>
-                        </section>
+<!--                        <section class="photos">-->
+<!--                            <div class="sub-header">~/../about/artwork</div>-->
+<!--                            <p class="quote">Art enables us to find ourselves and lose ourselves at the same time.</p>-->
+<!--                            <div id="app">-->
+<!--                                <div v-if="username && !loading">-->
+<!--                                    <template v-if="grams.length > 0">-->
+<!--                                        <div v-for="(gram, index) in grams" class="img_wrapper">-->
+<!--                                            <a :href="gram.permalink" target="_blank">-->
+<!--                                            <img :src="gram.media_url" :alt="gram.caption" class="thumbnail" />-->
+<!--                                            </a>-->
+<!--                                        </div>-->
+<!--                                    </template>-->
+<!--                                </div>-->
+<!--                                <div v-if="loading" style="height: 300px;position: relative">-->
+<!--                                    <div class="ui text center active loader">-->
+<!--                                        <span style="opacity: 0.6">Fetching photos...</span>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                                <div v-if="error" class="error">Sorry, the Instagram couldn't be fetched.</div>-->
+<!--                                 <button @click="getMoreGrams">Load More</button> -->
+<!--                            </div>-->
+<!--                            <div class="screenchot">-->
+
+<!--                            </div>-->
+<!--                            <div style="clear:both"></div>-->
+<!--                            <a class="external-link" target="_blank" href="https://www.instagram.com/sudom0nk/" style="margin-top: 23px;display: inline-block;" target="_blank">-->
+<!--                                See more-->
+<!--                                <svg xmlns="http://www.w3.org/2000/svg" height="24" viewBox="0 0 24 24" width="24">-->
+<!--                                    <path d="M0 0h24v24H0z" fill="none"/>-->
+<!--                                    <path d="M9 5v2h6.59L4 18.59 5.41 20 17 8.41V15h2V5z"/>-->
+<!--                                </svg>-->
+<!--                            </a>-->
+<!--                        </section>-->
                     </section>
                     <div class="ui hidden divider"></div>
                     <div class="ui hidden divider"></div>
@@ -166,6 +173,23 @@
                                 </svg>
                             </a>
                         </section>
+                    </section>
+                    <div class="ui hidden divider"></div>
+                    <div class="ui hidden divider"></div>
+                    <div class="ui hidden divider"></div>
+                    <div class="ui hidden computer-only divider"></div>
+                    <div class="ui hidden computer-only  divider"></div>
+                    <div class="ui hidden computer-only divider"></div>
+                    <section class="book">
+                        <div class="section-header" id="book">~/home/books</div>
+                        <p>The book I am currently reading...</p>
+                        <div id="image-frame">
+                            <img src="img/book.jpg" alt="">
+                            <div class="text-area">
+                                <p>The Secrets of Vesuvius </p>
+                                <p>by Caroline Lawrence</p>
+                            </div>
+                        </div>
                     </section>
                     <section class="footer">
                         <p><img src="https://emojis.slackmojis.com/emojis/images/1576133832/7296/babyyoda.png">May the force be with you.</p>
